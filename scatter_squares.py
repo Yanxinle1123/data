@@ -18,4 +18,4 @@ ax.tick_params(labelsize=10)
 # 设置每个坐标轴的取值范围
 ax.axis([0, 1100, 0, 1_100_000])
 
-plt.show()
+plt.savefig('squares_plot3.png', bbox_inches='tight')
