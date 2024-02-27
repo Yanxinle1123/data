@@ -17,4 +17,4 @@ ax.set_ylabel("Square of Value", fontsize=14)
 # 设置刻度标记的样式
 ax.tick_params(labelsize=10)
 
-plt.savefig('squares_plot1.png', bbox_inches='tight')
+plt.show()
