@@ -21,5 +21,7 @@ for value in poss_results:
 print(frequencies)
 
 # 对结果进行可视化
-plt.bar(poss_results, frequencies, edgecolor='black')
+plt.bar(poss_results, frequencies)
+plt.xlabel('X', fontsize=15)
+plt.ylabel('Y', fontsize=15)
 plt.show()
