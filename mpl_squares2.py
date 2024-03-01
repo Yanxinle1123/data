@@ -18,7 +18,7 @@ plt.style.use('seaborn-v0_8')
 fig, ax = plt.subplots()
 
 # 绘制折线图（蓝线）
-ax.plot(x, y, linewidth=3)
+ax.plot(x, y, linewidth=3, color=None)
 
 # 绘制散点图（红点）
 ax.scatter(input_values, squares, color='red', marker='o', zorder=3)
