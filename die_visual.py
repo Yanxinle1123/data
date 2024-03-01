@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+from LeleDrawDesigns.line_chart import LineChart
 
 from die import Die
 
@@ -22,6 +23,13 @@ print(frequencies)
 
 # 对结果进行可视化
 plt.bar(poss_results, frequencies)
-plt.xlabel('X', fontsize=15)
-plt.ylabel('Y', fontsize=15)
+plt.title('Results of Rolling One D6 1,000 Times', fontsize=20)
+plt.xlabel('Result', fontsize=15)
+plt.ylabel('Frequency of Result', fontsize=15)
 plt.show()
+
+input_values = []
+for i in range(len(frequencies)):
+    input_values.append(i + 1)
+straight_line_chart = LineChart(input_values=input_values, squares=frequencies, style='straight', skin='bmh')
+curved_line_chart = LineChart(input_values=input_values, squares=frequencies, style='curved', skin='bmh')
