@@ -31,5 +31,6 @@ plt.show()
 input_values = []
 for i in range(len(frequencies)):
     input_values.append(i + 1)
-straight_line_chart = LineChart(input_values=input_values, squares=frequencies, style='straight', skin='bmh')
-curved_line_chart = LineChart(input_values=input_values, squares=frequencies, style='curved', skin='bmh')
+straight_line_chart = LineChart(input_values=input_values, squares=frequencies, style='straight',
+                                skin='Solarize_Light2')
+curved_line_chart = LineChart(input_values=input_values, squares=frequencies, style='curved', skin='Solarize_Light2')
