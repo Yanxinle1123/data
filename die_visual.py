@@ -22,15 +22,24 @@ for value in poss_results:
 print(frequencies)
 
 # 对结果进行可视化
+title = 'Results of Rolling One D6 1,000 Times'
+xlabel = 'Result'
+ylabel = 'Frequency of Result'
+
 plt.bar(poss_results, frequencies)
-plt.title('Results of Rolling One D6 1,000 Times', fontsize=20)
-plt.xlabel('Result', fontsize=15)
-plt.ylabel('Frequency of Result', fontsize=15)
+plt.title(title, fontsize=20)
+plt.xlabel(xlabel, fontsize=15)
+plt.ylabel(ylabel, fontsize=15)
 plt.show()
 
 input_values = []
 for i in range(len(frequencies)):
     input_values.append(i + 1)
+
 straight_line_chart = LineChart(input_values=input_values, squares=frequencies, style='straight',
-                                skin='Solarize_Light2')
-curved_line_chart = LineChart(input_values=input_values, squares=frequencies, style='curved', skin='Solarize_Light2')
+                                skin='Solarize_Light2', set_title=title, set_title_fontsize=20, set_xlabel=xlabel,
+                                set_xlabel_fontsize=15, set_ylabel=ylabel, set_ylabel_fontsize=15)
+
+curved_line_chart = LineChart(input_values=input_values, squares=frequencies, style='curved', skin='Solarize_Light2',
+                              set_title=title, set_title_fontsize=20, set_xlabel=xlabel, set_xlabel_fontsize=15,
+                              set_ylabel=ylabel, set_ylabel_fontsize=15)
