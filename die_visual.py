@@ -26,7 +26,7 @@ title = 'Results of Rolling One D6 1,000 Times'
 xlabel = 'Result'
 ylabel = 'Frequency of Result'
 
-plt.bar(poss_results, frequencies)
+plt.bar(poss_results, frequencies, color='blue', edgecolor='black')
 plt.title(title, fontsize=20)
 plt.xlabel(xlabel, fontsize=15)
 plt.ylabel(ylabel, fontsize=15)
