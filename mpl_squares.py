@@ -1,20 +1,11 @@
-import matplotlib.pyplot as plt
+from LeleDrawDesigns.line_chart import LineChart
+from LeleDrawDesigns.obtain_all_skin import obtain_all_skin
 
 input_values = [1, 2, 3, 4, 5]
 squares = [1, 4, 9, 16, 25]
 
-# 设置图的样式
-plt.style.use('seaborn-v0_8')
+LineChart(squares=squares, input_values=input_values, line_width=3, set_title="Square Numbers",
+          set_title_fontsize=34, set_x_label="Value", set_x_label_fontsize=24, set_y_label="Square of Value",
+          set_y_label_fontsize=24, label_size=20, skin='Solarize_Light2', line_color='green', figsize=(10, 8))
 
-fig, ax = plt.subplots()
-ax.plot(input_values, squares, linewidth=3)
-
-# 设置图题并给坐标轴加上标签
-ax.set_title("Square Numbers", fontsize=24)
-ax.set_xlabel("Value", fontsize=14)
-ax.set_ylabel("Square of Value", fontsize=14)
-
-# 设置刻度标记的样式
-ax.tick_params(labelsize=10)
-
-plt.show()
+obtain_all_skin()
