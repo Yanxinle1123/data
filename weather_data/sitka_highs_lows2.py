@@ -32,12 +32,14 @@ date_nums = mdates.date2num(dates)
 f_highs = interp1d(date_nums, highs, kind='cubic')
 date_nums_interp = np.linspace(date_nums.min(), date_nums.max(), len(dates) * 10)
 highs_interp = f_highs(date_nums_interp)
-ax.plot(mdates.num2date(date_nums_interp), highs_interp, color='red')
+ax.plot(mdates.num2date(date_nums_interp), highs_interp, color='red', alpha=0.5)
 
 # 插值并绘制最低温度曲线
 f_lows = interp1d(date_nums, lows, kind='cubic')
 lows_interp = f_lows(date_nums_interp)
-ax.plot(mdates.num2date(date_nums_interp), lows_interp, color='blue')
+ax.plot(mdates.num2date(date_nums_interp), lows_interp, color='blue', alpha=0.5)
+
+ax.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
 
 # 设置绘制的格式
 ax.set_title("Daily High and Low Temperatures, 2021", fontsize=24)

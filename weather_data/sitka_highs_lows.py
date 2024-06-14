@@ -23,8 +23,9 @@ for row in reader:
 # 根据最高温度绘图
 plt.style.use('Solarize_Light2')
 fig, ax = plt.subplots(figsize=(15, 10))
-ax.plot(dates, highs, color='red')
-ax.plot(dates, lows, color='blue')
+ax.plot(dates, highs, color='red', alpha=0.5)
+ax.plot(dates, lows, color='blue', alpha=0.5)
+ax.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
 
 # 设置绘制的格式
 ax.set_title("Daily High and Low Temperatures, 2021", fontsize=24)
